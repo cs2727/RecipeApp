@@ -237,40 +237,9 @@ a {
   }
 }
 
-@media (max-width: 740px) {
-  .mainList {
-    left: 100px;
-  }
-}
-
-@media (max-width: 640px) {
-  .mainList {
-    left: 20px;
-  }
-
-  .navList {
-    left: 200px;
-  }
-}
-
-@media (max-width: 581px) {
-  .mainList {
-    left: -30px;
-  }
-}
-
-@media (max-width: 515px) {
-  .mainList {
-    left: -50px;
-  }
-
-  .navList {
-    left: 150px;
-  }
-}
 /* burger nav media queries */
 
-@media (max-width: 480px) {
+@media (max-width: 750px) {
   .nav {
     align-items: center;
   }
@@ -319,6 +288,7 @@ a {
     background-color: #ffa07a;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+    padding: 0;
   }
 
   .burgerNavList {
@@ -327,11 +297,20 @@ a {
     align-items: center;
     position: absolute;
     height: 3rem;
-    top: 202px;
+    top: 185px;
     width: 100%;
-    left: 0rem;
+    left: 0%;
     background-color: #77002e;
     z-index: 2;
+    padding: 0;
+  }
+
+  .burgerNavList li {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
 
   .burgerNavList hr {

@@ -8,6 +8,7 @@ import 'firebase/auth';
 import 'firebase/storage';
 
 function Recipeform() {
+  const submitButton = useRef();
   const reDirect = useNavigate();
   const recipeName = useRef();
   const recipeDish = useRef();
@@ -34,6 +35,9 @@ function Recipeform() {
       alert('Must be signed in to add recipes!');
       return;
     }
+
+    submitButton.current.disabled = true;
+    submitButton.current.style.filter = 'brightness(60%)';
 
     const recipeData = {
       userId: firebase.auth().currentUser.uid,
@@ -186,10 +190,17 @@ function Recipeform() {
           <textarea id="directions" required ref={recipeDirections} />
         </div>
 
+        <div className={classes.formNoticeContainer}>
+          <p className={classes.formNotice}>
+            Please wait a moment once you click submit as your recipe is being
+            processed and added to the libary
+          </p>
+        </div>
+
         <div className={classes.actions}>
           {' '}
           {/*Submit Button*/}
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" ref={submitButton} />
         </div>
       </form>
     </PageHeader>

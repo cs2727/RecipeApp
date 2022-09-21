@@ -1,26 +1,42 @@
-
-
 .tableContainer {
-    background-color:grey;
-    width:100rem;
-    height:10rem;
-    border-collapse: collapse;
+  background-color: grey;
+  width: 1600px;
+  height: 160px;
+  border-collapse: collapse;
 }
 
 .columnHeadersContainer {
-    height:2rem;
-    background-color:#3a6070;
+  height: 2rem;
+  background-color: #3a6070;
 }
 
 .columnHeadersContainer th {
-   font-family:sans-serif;
-   border:1px solid #77002e;
-   padding:4px 8px;
-   text-align:left;
-   font-size:1.1rem;
-   color:white;
+  font-family: sans-serif;
+  border: 1px solid #77002e;
+  padding: 4px 8px;
+  text-align: left;
+  font-size: 1.1rem;
+  color: white;
 }
 
 .tableContainer tr:nth-child(odd) td {
-    background-color:#e7edf0;
+  background-color: #e7edf0;
+}
+
+@media (max-width: 1700px) {
+  .tableContainer {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .tableContainer {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .tableContainer {
+    width: 90%;
+  }
 }

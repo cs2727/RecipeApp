@@ -1,5 +1,5 @@
 .formContainer {
-  height: 22rem;
+  height: 380px;
   width: 45rem;
   padding: 0.938rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -112,10 +112,10 @@ p {
 }
 
 .actions {
-  margin-top: 3rem;
   text-align: center;
   position: absolute;
-  bottom: 40px;
+  left: 0;
+  bottom: 30px;
   width: 100%;
 }
 
@@ -158,12 +158,14 @@ p {
 
 /* media queries */
 
-@media (max-width: 756px) {
+@media (max-width: 816px) {
   .formContainer {
-    width: 100%;
+    width: 90%;
   }
 
-  .control input {
+  .control input,
+  .control select,
+  .control textarea {
     width: 95%;
   }
 }

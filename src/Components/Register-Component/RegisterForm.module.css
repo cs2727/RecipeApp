@@ -1,5 +1,5 @@
 .formContainer {
-  height: 640px;
+  height: 710px;
   width: 720px;
   padding: 0.938rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -83,11 +83,11 @@
 }
 
 .errorMessageEmail {
-  bottom: 310px;
+  bottom: 370px;
 }
 
 .errorMessagePassword {
-  bottom: 105px;
+  bottom: 140px;
 }
 
 .errorMessageVisible {
@@ -96,12 +96,14 @@
 
 /* media queries */
 
-@media (max-width: 756px) {
+@media (max-width: 816px) {
   .formContainer {
-    width: 100%;
+    width: 90%;
   }
 
-  .control input {
+  .control input,
+  .control select,
+  .control textarea {
     width: 95%;
   }
 }

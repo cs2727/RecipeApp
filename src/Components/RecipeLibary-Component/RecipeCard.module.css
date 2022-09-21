@@ -17,5 +17,6 @@
   .list {
     width: 95%;
     margin-bottom: 2rem;
+    padding: 0;
   }
 }

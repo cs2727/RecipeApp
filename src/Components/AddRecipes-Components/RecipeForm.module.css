@@ -1,5 +1,5 @@
 .formContainer {
-  height: 1350px;
+  height: 1360px;
   width: 720px;
   padding: 0.938rem;
   margin-bottom: 2rem;
@@ -46,7 +46,7 @@ select {
 /* Button Styling */
 
 .actions {
-  margin-top: 1rem;
+  margin-block: 1.5em;
   text-align: center;
 }
 
@@ -67,15 +67,20 @@ select {
   border-color: #a50e48;
 }
 
+.formNotice {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
 @media (max-width: 816px) {
   .formContainer {
-    width: 100%;
-    padding: 0.5rem;
+    width: 90%;
   }
 
   .control input,
   .control select,
   .control textarea {
-    width: 100%;
+    width: 95%;
   }
 }

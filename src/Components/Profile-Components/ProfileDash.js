@@ -39,9 +39,7 @@ function ProfileDash() {
     <>
       {signedInState ? (
         <PageHeader
-          headerContent={`Profile Dashboard: ${
-            firebase.auth().currentUser.displayName
-          }`}
+          headerContent={`Profile: ${firebase.auth().currentUser.displayName}`}
         >
           <div className={classes.dashContainer}>
             <div onClick={accountInfoHandler}>

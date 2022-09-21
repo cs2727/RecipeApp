@@ -64,6 +64,8 @@ function Navigation() {
   // toggler to show or remove search bar--------------------------------------------------------------
   function toggleSearchBar() {
     searchBar.current.classList.toggle(classes.renderSearchBar);
+    mainLinks.current.classList.remove(classes.burgerMenu);
+    navLinks.current.classList.remove(classes.burgerNavList);
   }
 
   // Search Functionality to query through the recipe libary for recipes------------------------->
