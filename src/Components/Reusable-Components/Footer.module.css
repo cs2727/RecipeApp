@@ -1,0 +1,78 @@
+.footerContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 10rem;
+  background-color: #ffa07a;
+  margin-top: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.linkWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 50rem;
+}
+
+.linkContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  height: 8rem;
+}
+
+/* logo Container and children styling */
+
+.logoContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 30rem;
+}
+
+.logoContainer img {
+  background-color: #77002e;
+  border-radius: 10px;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.logoContainer img:hover {
+  background-color: #a50e48;
+  border-color: #a50e48;
+}
+
+/* media queries */
+
+@media (max-width: 958px) {
+  .footerContainer {
+    height: 20rem;
+    flex-flow: column nowrap;
+  }
+
+  .linkWrapper {
+    width: 100%;
+  }
+
+  .logoContainer {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 504px) {
+  .logoContainer {
+    margin: none;
+    width: 100%;
+  }
+
+  .logoContainer img {
+    height: 4rem;
+    width: 4rem;
+  }
+}

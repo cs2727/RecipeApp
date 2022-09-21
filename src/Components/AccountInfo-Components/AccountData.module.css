@@ -1,0 +1,12 @@
+
+
+.infoContainer {
+    height:30rem;
+    width:30rem;
+    background: radial-gradient(#f8eeee, #cdcecf);
+    display:flex;
+    justify-content: space-evenly;
+    flex-flow:column nowrap;
+    padding:1rem;
+}
+

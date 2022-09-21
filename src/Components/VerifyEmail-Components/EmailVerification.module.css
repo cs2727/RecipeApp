@@ -1,0 +1,18 @@
+.sectionContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column nowrap;
+  background-color: #77002e;
+  border-radius: 10px;
+  margin-top: 160px;
+  height: 320px;
+  width: 700px;
+  padding: 2em;
+  color: white;
+}

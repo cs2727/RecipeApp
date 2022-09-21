@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  list-style-type: none;
+  position: relative;
+  margin: 0 2rem;
+  background-image: url('/src/Images/recipelibarybackground.jpg');
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* media queries */
+
+@media (max-width: 706px) {
+  .list {
+    width: 95%;
+    margin-bottom: 2rem;
+  }
+}

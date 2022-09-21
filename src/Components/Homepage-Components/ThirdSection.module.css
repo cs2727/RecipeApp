@@ -1,0 +1,94 @@
+
+.thirdSectionContainer {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+    background-color:white;
+    margin-bottom:2rem;
+}
+
+.divContainer{
+    height:643px;
+    width:40rem;
+    position: relative;
+    opacity: 0.6;
+    transition:all 1s;
+}
+
+.divContainer img {
+    height:100%;
+    width:100%;
+}
+
+.divContainer:hover {
+    opacity: 1;
+}
+
+.divContainer:hover button {
+    height:3rem;
+    width:15rem;
+    font-size:0.9rem;
+}
+
+
+.infoContainer {
+    height:10rem;
+    width:25rem;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-evenly;
+    position:absolute;
+    bottom:5rem;
+    left:2rem;
+}
+
+.infoContainer h1 {
+    font-size:2rem;
+    color:rgb(17, 13, 7);
+}
+
+.infoContainer button {
+    height:2.5rem;
+    width:12rem;
+    cursor: pointer;
+    font-size:0.7rem;
+    font-weight:bold;
+    border:none;
+    color:black;
+    background-color:rgb(230, 161, 84);
+    transition:all 1s;
+}
+
+.infoContainer button:hover {
+    background-color: rgba(172, 118, 51, 0.945);
+}
+
+/* media queries */
+
+
+@media (max-width:795px){
+
+    .thirdSectionContainer {
+        margin-bottom:1rem;
+    }
+
+    .divContainer {
+        width:90%;
+        height:400px;
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+@media (max-width:600px){
+    .infoContainer{
+        bottom:1rem;
+        height:10rem;
+    }
+
+    .infoContainer h1 {
+        font-size:1.5rem;
+    }
+}

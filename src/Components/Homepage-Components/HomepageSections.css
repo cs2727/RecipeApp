@@ -1,0 +1,9 @@
+.homepageContentContainer {
+  padding-bottom: 200px;
+}
+
+@media (max-width: 958px) {
+  .homepageContentContainer {
+    padding-bottom: 350px;
+  }
+}

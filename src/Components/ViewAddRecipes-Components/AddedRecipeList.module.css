@@ -1,0 +1,26 @@
+
+
+.tableContainer {
+    background-color:grey;
+    width:100rem;
+    height:10rem;
+    border-collapse: collapse;
+}
+
+.columnHeadersContainer {
+    height:2rem;
+    background-color:#3a6070;
+}
+
+.columnHeadersContainer th {
+   font-family:sans-serif;
+   border:1px solid #77002e;
+   padding:4px 8px;
+   text-align:left;
+   font-size:1.1rem;
+   color:white;
+}
+
+.tableContainer tr:nth-child(odd) td {
+    background-color:#e7edf0;
+}

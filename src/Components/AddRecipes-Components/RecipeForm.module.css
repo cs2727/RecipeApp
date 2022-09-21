@@ -1,0 +1,81 @@
+.formContainer {
+  height: 1280px;
+  width: 720px;
+  padding: 0.938rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.control,
+.fileControl {
+  margin-bottom: 2rem;
+}
+
+.control label,
+.fileControl label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.fileControl input {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+.control input,
+textarea,
+select {
+  height: 40px;
+  width: 640px;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  font-family: sans-serif;
+}
+
+.control textarea {
+  height: 160px;
+  padding: 0.25rem;
+}
+
+.control .firstname {
+  margin-bottom: 1rem;
+}
+
+/* Button Styling */
+
+.actions {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.actions input {
+  font: inherit;
+  cursor: pointer;
+  background-color: #77002e;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #77002e;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.actions input:hover,
+.actions input:active {
+  background-color: #a50e48;
+  border-color: #a50e48;
+}
+
+@media (max-width: 816px) {
+  .formContainer {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .control input,
+  .control select,
+  .control textarea {
+    width: 100%;
+  }
+}

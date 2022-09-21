@@ -1,0 +1,177 @@
+.formContainer {
+  height: 22rem;
+  width: 45rem;
+  padding: 0.938rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.forgotPassword {
+  cursor: pointer;
+  font-weight: none;
+  color: #77002e;
+  position: absolute;
+  bottom: 8.7rem;
+}
+
+.forgotPassword:hover {
+  color: #a50e48;
+  text-decoration: underline;
+}
+
+.unrenderedOverlay,
+.unrenderedResetTab {
+  display: none;
+}
+
+.renderedOverlay {
+  display: block;
+  background-color: rgb(177, 177, 177);
+  z-index: 1;
+  height: 100vh;
+  position: absolute;
+  height: 100vh;
+  opacity: 0.4;
+  top: 0;
+  width: 100%;
+}
+
+.renderedResetTab {
+  display: flex;
+  margin: 0 auto;
+  flex-flow: column nowrap;
+  height: 320px;
+  width: 480px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 2em;
+}
+
+.renderedResetTab h1 {
+  margin: 1rem auto;
+}
+
+.renderedResetTab hr,
+p {
+  margin-bottom: 1rem;
+}
+
+.renderedResetTab label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.renderedResetTab input {
+  width: 320px;
+  height: 32px;
+  font-size: 1rem;
+  padding: 0.25rem;
+}
+
+.checkboxContainer {
+  height: 2rem;
+  font-size: 1rem;
+  color: black;
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 5rem;
+}
+
+.checkboxContainer input {
+  height: 1.5rem;
+  width: 2rem;
+}
+
+.control {
+  margin-bottom: 1rem;
+}
+
+.control label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.control input {
+  height: 2.5rem;
+  width: 40rem;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+  font-family: sans-serif;
+  margin-bottom: 0.8rem;
+}
+
+.actions {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.actions input {
+  font: inherit;
+  cursor: pointer;
+  background-color: #77002e;
+  color: white;
+  border: 1px solid #77002e;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 90px;
+  height: 35px;
+}
+
+.actions input:hover,
+.actions input:active {
+  background-color: #a50e48;
+  border-color: #a50e48;
+}
+
+.errorMessage,
+.errorMessageOverlay {
+  display: none;
+  color: red;
+  position: absolute;
+}
+
+.errorMessage {
+  bottom: 100px;
+}
+
+.errorMessageOverlay {
+  bottom: 100px;
+}
+
+.errorMessageVisible {
+  display: block;
+}
+
+/* media queries */
+
+@media (max-width: 756px) {
+  .formContainer {
+    width: 100%;
+  }
+
+  .control input {
+    width: 95%;
+  }
+}
+
+@media (max-width: 504px) {
+  .renderedResetTab {
+    width: 100%;
+  }
+}
+
+@media (max-width: 382px) {
+  .headerContainer {
+    height: 8rem;
+  }
+}

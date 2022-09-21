@@ -1,0 +1,43 @@
+
+.Container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    height:15rem;
+    display: flex;
+    flex-flow: column nowrap;
+    padding:15px;
+    position:relative;
+}
+
+.Container h1 {
+    font-size:1.2rem;
+}
+
+
+.linkContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    bottom:0rem;
+    left:0rem;
+    width:100%;
+    margin-bottom:1rem;
+}
+
+.linkContainer a{
+    font: inherit;
+    cursor: pointer;
+    background-color: #77002e;
+    color: white;
+    padding: 0.3rem 1.5rem;
+    border: 1px solid #77002e;
+    border-radius: 4px;
+    font-weight:bold;
+}
+
+
+.linkContainer a:hover,
+.linkContainer a:active {
+  background-color: #a50e48;
+  border-color: #a50e48;
+}
