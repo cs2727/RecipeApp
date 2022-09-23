@@ -24,15 +24,15 @@ function ProfileDash() {
   }, []);
 
   function accountInfoHandler() {
-    history('/profile/account-information');
+    history('/RecipeApp/profile/account-information');
   }
 
   function changePasswordHandler() {
-    history('/profile/change-password');
+    history('/RecipeApp/profile/change-password');
   }
 
   function viewAddedRecipesHandler() {
-    history('/profile/view-added-recipes');
+    history('/RecipeApp/profile/view-added-recipes');
   }
 
   return (

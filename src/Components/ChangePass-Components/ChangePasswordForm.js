@@ -42,16 +42,17 @@ function ChangePasswordForm() {
       .then(() => {
         errorMessageOverlayElement.current.innerHTML =
           'Password Reset Email Successfully Sent';
-        errorMessageOverlayElement.current.classList.toggle(
+        errorMessageOverlayElement.current.classList.add(
           classes.errorMessageVisible
         );
       })
       .catch(() => {
         errorMessageOverlayElement.current.innerHTML =
           'Password Reset Email not Sent (Email not registered)';
-        errorMessageOverlayElement.current.classList.toggle(
+        errorMessageOverlayElement.current.classList.add(
           classes.errorMessageVisible
         );
+        resetEmail.current.value = '';
       });
   }
 
@@ -68,7 +69,7 @@ function ChangePasswordForm() {
         .then(() => {
           errorMessageElement.current.innerHTML =
             'Password successfully changed';
-          errorMessageElement.current.classList.toggle(
+          errorMessageElement.current.classList.add(
             classes.errorMessageVisible
           );
           confirmPasswordElement.current.value = '';
@@ -96,11 +97,14 @@ function ChangePasswordForm() {
   // Escape Key registered Event Listener for when we click escape key to remove overlay related elements
   document.onkeydown = function (evt) {
     const pathname = window.location.pathname;
-    if (evt.key === 'Escape' && pathname === '/login') {
+    if (
+      evt.key === 'Escape' &&
+      pathname === '/RecipeApp/profile/change-password'
+    ) {
       overlay.current.classList.remove(classes.renderedOverlay);
-      resetTab.current.classList.remove(
-        classes.renderedResetTab,
-        classes.removeContent
+      resetTab.current.classList.remove(classes.renderedResetTab);
+      errorMessageOverlayElement.current.classList.remove(
+        classes.errorMessageVisible
       );
       resetEmail.current.value = '';
     }

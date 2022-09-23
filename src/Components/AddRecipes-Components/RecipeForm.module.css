@@ -46,7 +46,7 @@ select {
 /* Button Styling */
 
 .actions {
-  margin-block: 1.5em;
+  margin-top: 4em;
   text-align: center;
 }
 
@@ -67,7 +67,12 @@ select {
   border-color: #a50e48;
 }
 
+.formNoticeContainer {
+  position: relative;
+}
 .formNotice {
+  position: absolute;
+  bottom: 10px;
   font-size: 0.8rem;
   font-weight: bold;
   margin: 0;

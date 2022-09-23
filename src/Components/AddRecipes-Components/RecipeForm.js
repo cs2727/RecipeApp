@@ -80,7 +80,7 @@ function Recipeform() {
     )
       .then(() => {
         recipeLibaryInfo.fetchRecipes();
-        reDirect('/recipes');
+        reDirect('/RecipeApp/recipes');
       })
       .catch((error) => {
         console.log(error);

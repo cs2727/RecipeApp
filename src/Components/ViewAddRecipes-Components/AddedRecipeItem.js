@@ -37,7 +37,7 @@ function AddedRecipeItem(props) {
 
     recipeData.name = recipeNameArr.join('');
     configureRecipe.renderRecipe([recipeData]);
-    redirect(`/profile/view-added-recipes/${recipeData.name}`);
+    redirect(`/RecipeApp/profile/view-added-recipes/${recipeData.name}`);
   }
 
   function cancelButtonHandler() {
@@ -62,8 +62,10 @@ function AddedRecipeItem(props) {
 
   document.onkeydown = function (evt) {
     const pathname = window.location.pathname;
-    if (evt.key === 'Escape' && pathname === '/profile/view-added-recipes') {
-      console.log('hi');
+    if (
+      evt.key === 'Escape' &&
+      pathname === '/RecipeApp/profile/view-added-recipes'
+    ) {
       overlayElement.current.classList.remove(classes.renderedOverlay);
       deleteTabElement.current.classList.remove(classes.renderedDeleteTab);
     }

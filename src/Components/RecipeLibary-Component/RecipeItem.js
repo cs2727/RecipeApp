@@ -15,7 +15,7 @@ function RecipeItem(props) {
   const location = useLocation();
   let toggleTextContent = false;
 
-  if (location.pathname === '/favorites') {
+  if (location.pathname === '/RecipeApp/favorites') {
     toggleTextContent = true;
   }
 
@@ -35,10 +35,10 @@ function RecipeItem(props) {
   function viewButtonHandler() {
     let urlpath;
 
-    if (window.location.pathname === '/recipes') {
-      urlpath = '/recipes';
+    if (window.location.pathname === '/RecipeApp/recipes') {
+      urlpath = '/RecipeApp/recipes';
     } else {
-      urlpath = '/favorites';
+      urlpath = '/RecipeApp/favorites';
     }
     const recipeNameArr = props.recipeName.split('');
     for (let i = 0; i < recipeNameArr.length; i++) {
@@ -54,9 +54,9 @@ function RecipeItem(props) {
 
   function favoriteRecipeHandler() {
     if (firebase.auth().currentUser === null) {
-      redirect('/favorites');
+      redirect('/RecipeApp/favorites');
       return;
-    } else if (window.location.pathname === '/recipes') {
+    } else if (window.location.pathname === '/RecipeApp/recipes') {
       favoriteRecipeInfo.store(firebase.auth().currentUser.uid, recipeData);
     } else {
       favoriteRecipeInfo.delete(

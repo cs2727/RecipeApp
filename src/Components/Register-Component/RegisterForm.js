@@ -38,7 +38,7 @@ function RegisterForm() {
           });
           firebase.auth().currentUser.sendEmailVerification();
           firebase.auth().signOut();
-          reDirect('/verify-email');
+          reDirect('/RecipeApp/verify-email');
         })
         .catch((error) => {
           if (error.code === 'auth/email-already-in-use') {

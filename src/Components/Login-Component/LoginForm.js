@@ -41,7 +41,7 @@ function LoginForm() {
           );
           firebase.auth().currentUser.sendEmailVerification();
           firebase.auth().signOut();
-          reDirect('/verify-email');
+          reDirect('/RecipeApp/verify-email');
         }
       })
       .catch((error) => {
@@ -93,11 +93,11 @@ function LoginForm() {
 
   document.onkeydown = function (evt) {
     const pathname = window.location.pathname;
-    if (evt.key === 'Escape' && pathname === '/login') {
+    if (evt.key === 'Escape' && pathname === '/RecipeApp/login') {
       overlay.current.classList.remove(classes.renderedOverlay);
-      resetTab.current.classList.remove(
-        classes.renderedResetTab,
-        classes.removeContent
+      resetTab.current.classList.remove(classes.renderedResetTab);
+      errorMessageOverlayElement.current.classList.remove(
+        classes.errorMessageVisible
       );
       resetEmail.current.value = '';
     }

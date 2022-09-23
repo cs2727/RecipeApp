@@ -9,11 +9,11 @@ function ThirdSection() {
 
   function reDirect(event) {
     if (event.target.textContent === 'VIEW RECIPE FORM') {
-      history('/add-recipe');
+      history('/RecipeApp/add-recipe');
     } else if (event.target.textContent === 'VIEW FAVORITE RECIPES') {
-      history('/favorites');
+      history('/RecipeApp/favorites');
     } else {
-      history('/recipes');
+      history('/RecipeApp/recipes');
     }
   }
 

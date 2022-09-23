@@ -22,7 +22,7 @@ function Navigation() {
 
   // the search bar will show 'Type here to find recipes' if inputTextContent is true and if not
   // it will replace 'recipes' with 'favorite recipes'
-  if (window.location.pathname === '/favorites') {
+  if (window.location.pathname === '/RecipeApp/favorites') {
     inputTextContent = false;
   }
 
@@ -35,7 +35,7 @@ function Navigation() {
   // This will sign the user out ----------------------------------------------------------------------------->
   function signingOutHandler() {
     firebase.auth().signOut();
-    history('/');
+    history('/RecipeApp');
   }
 
   // This useEffect will create a onAuthStateChanged event listener that will be triggered whenever a user
@@ -47,16 +47,22 @@ function Navigation() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user !== null) {
         favoriteRecipeInfo.render(firebase.auth().currentUser.uid);
-        setStateOfUser([true, 'Profile', 'Sign Out', '/profile']);
+        setStateOfUser([true, 'Profile', 'Sign Out', '/RecipeApp/profile']);
       } else {
-        setStateOfUser([false, 'Log In', 'Register', '/login', '/register']);
+        setStateOfUser([
+          false,
+          'Log In',
+          'Register',
+          '/RecipeApp/login',
+          '/RecipeApp/register',
+        ]);
       }
 
       if (
-        window.location.pathname === '/login' &&
+        window.location.pathname === '/RecipeApp/login' &&
         user.emailVerified === true
       ) {
-        history('/');
+        history('/RecipeApp');
       }
     });
   }, []);
@@ -74,7 +80,7 @@ function Navigation() {
     let recipeLibary;
     const matchingRecipes = [];
 
-    if (window.location.pathname !== '/favorites') {
+    if (window.location.pathname !== '/RecipeApp/favorites') {
       recipeLibary = recipeLibaryInfo.recipes;
     } else {
       recipeLibary = favoriteRecipeInfo.favRecipes;
@@ -87,7 +93,7 @@ function Navigation() {
       }
     });
 
-    if (window.location.path !== '/favorites') {
+    if (window.location.path !== '/RecipeApp/favorites') {
       recipeLibaryInfo.fetchRecipes(matchingRecipes);
     } else {
       favoriteRecipeInfo.getFavRecipes(
@@ -101,10 +107,13 @@ function Navigation() {
 
   function searchEnter() {
     const location = window.location.pathname;
-    if (location === '/recipes' || location === '/favorites') {
+    if (
+      location === '/RecipeApp/recipes' ||
+      location === '/RecipeApp/favorites'
+    ) {
       return;
-    } else if (location !== 'recipes') {
-      history('/recipes');
+    } else if (location !== '/RecipeApp/recipes') {
+      history('/RecipeApp/recipes');
     }
   }
 
@@ -134,7 +143,7 @@ function Navigation() {
       {' '}
       {/* Navigation bar */}
       {/* Recipe Logo */}
-      <Link to="/">
+      <Link to="/RecipeApp">
         <img
           className={classes.recipeLogo}
           src={RecipeLogo}
@@ -172,13 +181,13 @@ function Navigation() {
       {/*Main Links*/}
       <ul className={classes.mainList} ref={mainLinks}>
         <li key="1">
-          <Link to="/recipes">Recipes Libary</Link>
+          <Link to="/RecipeApp/recipes">Recipes Libary</Link>
         </li>
         <li key="2">
-          <Link to="/add-recipe">Add Recipes</Link>
+          <Link to="/RecipeApp/add-recipe">Add Recipes</Link>
         </li>
         <li key="3">
-          <Link to="/favorites">Favorite Recipes</Link>
+          <Link to="/RecipeApp/favorites">Favorite Recipes</Link>
         </li>
       </ul>
       {/*Search bar*/}

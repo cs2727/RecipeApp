@@ -20,11 +20,11 @@ function App() {
   const currentRecipePath = useContext(recipeInformation).recipeURL;
   let recipeToggler, profileToggler;
 
-  if (window.location.pathname === `/recipes/${currentRecipePath}`) {
+  if (window.location.pathname === `/RecipeApp/recipes/${currentRecipePath}`) {
     recipeToggler = true;
   } else if (
     window.location.pathname ===
-    `/profile/view-added-recipes/${currentRecipePath}`
+    `/RecipeApp/profile/view-added-recipes/${currentRecipePath}`
   ) {
     profileToggler = true;
   }
@@ -33,37 +33,37 @@ function App() {
     <div>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/RecipeApp" element={<Homepage />}></Route>
         <Route
           path={
             recipeToggler
-              ? `/recipes/${currentRecipePath}`
+              ? `/RecipeApp/recipes/${currentRecipePath}`
               : profileToggler
-              ? `/profile/view-added-recipes/${currentRecipePath}`
-              : `/favorites/${currentRecipePath}`
+              ? `/RecipeApp/profile/view-added-recipes/${currentRecipePath}`
+              : `/RecipeApp/favorites/${currentRecipePath}`
           }
           element={<Recipe />}
         ></Route>
-        <Route path="/favorites" element={<Favorites />}></Route>
-        <Route path="/add-recipe" element={<AddRecipe />}></Route>
-        <Route path="/recipes" element={<RecipeLibary />}></Route>
-        <Route path="/add-recipe" element={<AddRecipe />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/RecipeApp/favorites" element={<Favorites />}></Route>
+        <Route path="/RecipeApp/add-recipe" element={<AddRecipe />}></Route>
+        <Route path="/RecipeApp/recipes" element={<RecipeLibary />}></Route>
+        <Route path="/RecipeApp/add-recipe" element={<AddRecipe />}></Route>
+        <Route path="/RecipeApp/login" element={<Login />}></Route>
+        <Route path="/RecipeApp/register" element={<Register />}></Route>
+        <Route path="/RecipeApp/profile" element={<Profile />}></Route>
         <Route
-          path="/profile/account-information"
+          path="/RecipeApp/profile/account-information"
           element={<AccountInfo />}
         ></Route>
         <Route
-          path="/profile/change-password"
+          path="/RecipeApp/profile/change-password"
           element={<ChangePassword />}
         ></Route>
         <Route
-          path="/profile/view-added-recipes"
+          path="/RecipeApp/profile/view-added-recipes"
           element={<ViewAddedRecipes />}
         ></Route>
-        <Route path="/verify-email" element={<VerifyEmail />}></Route>
+        <Route path="/RecipeApp/verify-email" element={<VerifyEmail />}></Route>
       </Routes>
       <Footer />
     </div>
