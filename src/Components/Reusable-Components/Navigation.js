@@ -68,8 +68,10 @@ function Navigation() {
   }, []);
 
   // toggler to show or remove search bar--------------------------------------------------------------
-  function toggleSearchBar() {
-    searchBar.current.classList.toggle(classes.renderSearchBar);
+  function toggleSearchBar(event) {
+    if (event.target.innerHTML === 'Search') {
+      searchBar.current.classList.toggle(classes.renderSearchBar);
+    }
     mainLinks.current.classList.remove(classes.burgerMenu);
     navLinks.current.classList.remove(classes.burgerNavList);
   }
@@ -159,7 +161,10 @@ function Navigation() {
       {/* Navigation Links */}
       <ul className={classes.navList} ref={navLinks}>
         <li key="1">
-          <Link to={stateOfUser[0] === null ? 'Loading' : stateOfUser[3]}>
+          <Link
+            to={stateOfUser[0] === null ? 'Loading' : stateOfUser[3]}
+            onClick={toggleSearchBar}
+          >
             {stateOfUser[1]}
           </Link>
         </li>
@@ -172,7 +177,10 @@ function Navigation() {
           {stateOfUser[0] ? (
             <a onClick={signingOutHandler}>Sign Out</a> // sign out
           ) : (
-            <Link to={stateOfUser[0] === null ? 'Loading' : stateOfUser[4]}>
+            <Link
+              to={stateOfUser[0] === null ? 'Loading' : stateOfUser[4]}
+              onClick={toggleSearchBar}
+            >
               {stateOfUser[2]}
             </Link> // register
           )}
@@ -181,13 +189,19 @@ function Navigation() {
       {/*Main Links*/}
       <ul className={classes.mainList} ref={mainLinks}>
         <li key="1">
-          <Link to="/RecipeApp/recipes">Recipes Libary</Link>
+          <Link to="/RecipeApp/recipes" onClick={toggleSearchBar}>
+            Recipes Libary
+          </Link>
         </li>
         <li key="2">
-          <Link to="/RecipeApp/add-recipe">Add Recipes</Link>
+          <Link to="/RecipeApp/add-recipe" onClick={toggleSearchBar}>
+            Add Recipes
+          </Link>
         </li>
         <li key="3">
-          <Link to="/RecipeApp/favorites">Favorite Recipes</Link>
+          <Link to="/RecipeApp/favorites" onClick={toggleSearchBar}>
+            Favorite Recipes
+          </Link>
         </li>
       </ul>
       {/*Search bar*/}

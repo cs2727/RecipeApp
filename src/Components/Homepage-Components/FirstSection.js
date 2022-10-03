@@ -1,6 +1,6 @@
 import image1 from '../../Images/image-1.png';
-import image2 from '../../Images/image-2.png';
-import image3 from '../../Images/image-3.png';
+import image2 from '../../Images/image-2.jpeg';
+import image3 from '../../Images/image-3.jpeg';
 import classes from './FirstSection.module.css';
 import { useRef } from 'react';
 
